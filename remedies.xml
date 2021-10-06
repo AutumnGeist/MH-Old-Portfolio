@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<remedies>
+	<remedy id="1">
+		<name>Herbal Bath</name>
+		<image>images/herbBath.jpg</image>
+		<description>Soaking in warm water cleanses the body, rejuvenates the spirit, helps soothe aching muscles, and relaxes the mind. Herbal baths can be prepared with fresh or dried herbs, essential oils, and other ingredients such as oatmeal, Dead Sea salts, and moisturizing carrier oils like jojoba or almond oil.</description>
+		<instructions>Add approximately 1/2 cup of herbs to bathwater while the faucet is running. Soak in the water for at least 15 minutes.</instructions>
+		<tips>To simplify cleanup, wrap the herbs in cheesecloth to form a pouch!</tips>
+	</remedy>
+
+	<remedy id="2">
+		<name>Herbal Capsules</name>
+		<image>images/capsules.jpg</image>
+		<description>Capsules are powdered herbs enclosed within a digestible outer shell. They are fairly easy to make, and can be with a variety of different herbs for internal medicine.</description>
+		<instructions>Purchase empty capsules and a capsule making tool. Check the recommended dosage of the remedy you plan to make. Grind the herbs with a mortar and pestle or an herb grinder until powdery. Use the tool to to scoop the powdered herbs into the capsules.</instructions>
+		<tips>Prepare a label for the countainer you will keep the capsules in. Include dosage information. Store herbal capsules in airtight containers away from light and heat.</tips>
+	</remedy>
+	
+	<remedy id="3">
+		<name>Herbal Infusions</name>
+		<image>images/infusion.jpg</image>
+		<description>Herbal infusions are similar to making herbal teas. Herbs are steeped in boiling hot water for a set amount of time to extract the nutrients.</description>
+		<instructions>Crush or chop the desired amount of each type of herb the remedy calls for. Place the herbs in a tea infuser, and place the infuser inside a mug or small bowl. Pour 1 cup of boiling water into the container with the diffuser. Cover the container and allow to steep for between 15 and 20 minutes.</instructions>
+		<tips>Use filtered water to prepare the infusion. Infusions work best with herbs that are palatable.</tips>
+	</remedy>
+	
+	<remedy id="4">
+		<name>Herbal Lozenges</name>
+		<image>images/lozenge.jpg</image>
+		<description>Herbal lozenges are a lot like hard candy or cough drops. They are used to soothe sore throats, or make taking herbal medicines more pleasurable.</description>
+		<instructions>Create an herbal infusion using the herbs for the recipe. Add 1 cup of the infusion to pot over med-high heat. Stir in 1 cup of sugar and 1/2 cup of honey. Bring to boil and stir until temperture reaches 302 degrees F. Pour into molds and let it cool for several hours.</instructions>
+		<tips>Store in an airtight container at room temperature. Use a candy thermometer to check the temperatures!</tips>
+	</remedy>
+	
+	<remedy id="5">
+		<name>Herbal Powders</name>
+		<image>images/powder.jpg</image>
+		<description>Herbal powders are ideal for treating skin ailments such as athlete's foot or ringworm. They are also useful for absorbing sweat and managing body odors.</description>
+		<instructions>Grind herbs into a fine powder, and combine with additional ingredients such as fine white clay, arrowroot powder, or baking soda. Using a funnel, pour the powder into a container. Shake powder onto the desired area of body. </instructions>
+		<tips>Formulate only enough powder to use within a week. Herbs lose their efficacy rapidly once ground. Try adding aromatic herbs such as rose petals, lavender, and peppermint for aromatherapy benefits!</tips>
+	</remedy>
+	
+	<remedy id="6">
+		<name>Infused Oils</name>
+		<image>images/oilJars.jpg</image>
+		<description>Infused oils can be prepared for external or internal use. They are made by soaking herbs in oil and can be made using dried herbs for a cold oil infusion, or using dried/fresh herbs for a hot oil infusion.</description>
+		<instructions>Place 1 cup of herbs in 2 cups of oil. For cold oil infusion, let soak in a covered glass jar and place in a warm place for 2 weeks. After curing, strain the oil through a cheesecloth into a dark-colored bottle. For hot oil infusion, simmer in a pan for two hours. Allow to cool completely, then strain into dark-colored bottle. </instructions>
+		<tips>Store infused oil in the refridgerator for up to 3 months. Try adding rosemary, garlic, and basil! </tips>
+	</remedy>
+	
+	<remedy id="7">
+		<name>Salves and Ointments</name>
+		<image>images/ointment.jpg</image>
+		<description>Salves and ointments are viscous oil-based preparations that can be prepared with any medicinal herbs you'd like to apply topically. They are ideal for topical ailments such as dry itchy skin, sunburns, and minor cuts and scrapes.</description>
+		<instructions>Combine 1 cup of dried herbs or 4 cups of fresh herbs with 4 cups of water. Bring the mixture to a boil, then turn down to simmer slowly, uncovered, until the water reduces by about half. Turn off heat and let cool. Strain the mixture through a cheesecloth. Pour the liquid into a measuring cup, and add an equal amount of oil. Pour into pan and bring to simmer until all water has evaporated. Add pure beeswax and stire to bring it to the desired consistency. Store in glass container in a cool, dark place.</instructions>
+		<tips>Formulate only enough powder to use within a week. Herbs lose their efficacy rapidly once ground. Try adding aromatic herbs such as rose petals, lavender, and peppermint for aromatherapy benefits!</tips>
+	</remedy>
+	
+	<remedy id="8">
+		<name>Syrups</name>
+		<image>images/syrup.jpg</image>
+		<description>Syrup is a thick, viscous liquid made of sugar and water, that is often medicated. Syrups made with medicinal herbs are usually intended to treat cold and flu symptoms such as coughs and sore throats. They are also excellent for preparing herbal allergy remedies. </description>
+		<instructions>Place 1 cup of dried herbs or 4 cups of fresh herbs into a pan and add 4 cups of water. Bring the mixture to a boil, then reduce the heat and allow it to simer, uncovered, until only half of the original amount of liquid remains. Allow the mixture to cool and then strain the herbs through a cheesecloth. Pour the liquid back in the pan, add 2 cups of honey, and continue simmering until it reaches the desired consistency. Store the syrup in jars in a cool dark place. Take 1 tablespoon at a time as needed. </instructions>
+		<tips>Infuse the syrup with natural flavoring agents such as vanilla, citrus, berry, cinnamon, or peppermint to make it taste more appealing!</tips>
+	</remedy>
+</remedies>

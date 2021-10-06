@@ -1,0 +1,295 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>SGremedies</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="SGcss.css">
+<!--Jquery link-->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<!--Jquery plugin link-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.js"></script>	
+<script type= "text/javascript">
+	
+	//add event listeners
+	function registerListeners() {
+		document.getElementById("ginger").addEventListener("mouseover", ginger, false);
+		document.getElementById("burn").addEventListener("mouseover", burn, false);
+		document.getElementById("balm").addEventListener("mouseover", balm, false);
+		document.getElementById("tea").addEventListener("mouseover", tea, false);
+		document.getElementById("syrup").addEventListener("mouseover", syrup, false);
+		document.getElementById("tumeric").addEventListener("mouseover", tumeric, false);
+		document.getElementById("ginger").addEventListener("mouseout", mouseOut, false);
+		document.getElementById("burn").addEventListener("mouseout", mouseOut, false);
+		document.getElementById("balm").addEventListener("mouseout", mouseOut, false);
+		document.getElementById("tea").addEventListener("mouseout", mouseOut, false);
+		document.getElementById("syrup").addEventListener("mouseout", mouseOut, false);
+		document.getElementById("tumeric").addEventListener("mouseout", mouseOut, false);
+		document.getElementById("ginger").addEventListener("click", function() {display("gingerTea.jpg");}, false);
+		document.getElementById("burn").addEventListener("click", function() {display("aloeVeraCream.jpg");}, false);
+		document.getElementById("balm").addEventListener("click", function() {display("balm.jpg");}, false);
+		document.getElementById("tea").addEventListener("click", function() {display("tea.jpg");}, false);
+		document.getElementById("syrup").addEventListener("click", function() {display("syrup.jpg");}, false);
+		document.getElementById("tumeric").addEventListener("click", function() {display("tumeric.jpg");}, false);
+	}
+	//function to clear info for mouseout
+	function mouseOut() {
+		document.getElementById("title").innerHTML = " ";
+		document.getElementById("ingredients").innerHTML = " ";
+		document.getElementById("instructions").innerHTML = " ";
+		document.getElementById("largeImg").setAttribute("src", " ");
+		document.getElementById("largeImg").setAttribute("alt", " ");
+		document.getElementById("remInfo").style.backgroundColor = "";
+	}
+	//functions to display remedy info after mouseover
+	function ginger() {
+		document.getElementById("title").innerHTML = "Fresh Ginger Tea";
+		document.getElementById("remInfo").style.color = "indigo";
+		document.getElementById("remInfo").style.backgroundColor = "lightgoldenrodyellow";
+		
+		document.getElementById("ingredients").innerHTML = "<b>Ingredients</b><br>1 cup water<br> 1 (2-inch) section ginger root<br> Honey or stevia (optional)";
+		document.getElementById("instructions").innerHTML = "1. Boil the water. Peel the ginger root and slice as thinly as possible. Place the ginger root in a mug or teapot. <br> 2. Add the boiling water, cover the container and allow the ginger to steep until the tea has cooled enough to drink. Sweeten the tea with honey or stevia.<br>3. Drink up to 3 cups a day";
+	}
+	function burn() {
+		document.getElementById("title").innerHTML = "Cooling Aloe Vera Burn Balm";
+		document.getElementById("remInfo").style.color = "indigo";
+		document.getElementById("remInfo").style.backgroundColor = "lightgoldenrodyellow";
+		document.getElementById("ingredients").innerHTML = "<b>Ingredients</b><br>Gel from 1 medium-size aloe leaf or 1 tablespoon commerically prepared aloe vera gel<br>10 drops lavender essential oil (optional)";
+		document.getElementById("instructions").innerHTML = "<b>Instructions</b><br>1. Combine the aloe gel and essential oil in a small bowl, stirring well to blend completely. <br>2. Apply the balm liberally and allow it to evaporate naturally. <br>3. Reapply as needed, store the balm in an airtight container in the refridgerator for up to 3 days.";
+	}
+	function balm() {
+		document.getElementById("title").innerHTML = "Caldenula First Aid Salve";
+		document.getElementById("remInfo").style.color = "indigo";
+		document.getElementById("remInfo").style.backgroundColor = "lightgoldenrodyellow";
+		document.getElementById("ingredients").innerHTML = "<b>Ingredients</b><br>1 cup organic olive or sunflower oil<br>1/2 cup crushed dried calendula flowers or 1 cup fresh calendula flowers<br>4 tablespoons finely grated beeswax";
+		document.getElementById("instructions").innerHTML = "<b>Instructions</b><br>1. Preheat the oven to 200 degrees F<br>2. Combine the oil and calendula in a baking dish and put it in the overn, uncovered, for 3 to 4 hours.<br>3. After removing from the over, allow it to cool. Use a fine-mesh sieve to strain the mixture, extracting as much oil as possible from the calendula.<br> 4. Pour the oil back into the oven-safe container and add the beeswax. Put the container back in the over and leave it there for a few minutes, until the beeswax has melted.";
+	}
+	function tea() {
+		document.getElementById("title").innerHTML = "Echinacea Cold Care Tea";
+		document.getElementById("remInfo").style.color = "indigo";
+		document.getElementById("remInfo").style.backgroundColor = "lightgoldenrodyellow";
+		document.getElementById("ingredients").innerHTML = "<b>Ingredients</b><br>2 ounces dried chopped echinacea root<br>1 ounce dried hyssop<br>1 ounce dried peppermint<br>1 ounce dried thyme<br>2 cups water per dose<br>Honey or stevia (optional)";
+		document.getElementById("instructions").innerHTML = "<b>Instructions</b><br>1. Combine the herbs and store them in an airtight container in a cool, dark place.<br>2. Add 2 tablespoons of the dried herbs to 2 cups of boiling water, and allow the herbs to steep for 10 to 15 minutes. Using a fine-mesh sieve, strain the liquid into a large mug. Sweeten with honey or stevia.<br>3. Drink the entire dose 3 times a day until symptoms subside.";
+	}
+	function syrup() {
+		document.getElementById("title").innerHTML = "Cinnamon-Chamomile Cough Syrup";
+		document.getElementById("remInfo").style.color = "indigo";
+		document.getElementById("remInfo").style.backgroundColor = "lightgoldenrodyellow";
+		document.getElementById("ingredients").innerHTML = "<b>Ingredients</b><br>4 cups of water<br>1/4 cup grated fresh ginger root<br>1/4 cup dried chamomile flowers or 1/2 cup fresh chamomile flowers<br>1 tablespoon powdered cinnamon<br>1 cup honey";
+		document.getElementById("instructions").innerHTML = "<b>Instructions</b><br>1. Combine the water, ginger, chamomile, and cinnamon in a medium saucepan and bring to a boil. Reduce the heat and simmer gently for 15 to 20 minutes, or until reduced by half.<br>2. Remove the pan from heat and allow the mixture to cool, then strain the syrup through a fine-mesh sieve to remove the herbs. Pour the strained liquid back into the pan and add the honey, heating gently to combine thoroughly.";
+	}
+	function tumeric() {
+		document.getElementById("title").innerHTML = "Tumeric Cough Formula";
+		document.getElementById("remInfo").style.color = "indigo";
+		document.getElementById("remInfo").style.backgroundColor = "lightgoldenrodyellow";
+		document.getElementById("ingredients").innerHTML = "<b>Ingredients</b><br>1 cup water<br> 1 teaspoon turmeric powder<br>1 tablespoon honey<br>1 teaspoon fresh lemon juice";;
+		document.getElementById("instructions").innerHTML = "<b>Instructions</b><br>1. Boil the water and pour it into a mug.<br>2. Add the turmeric powder, honey, and lemon juice and stir well. Allow the formula to cool until its cool enough to drink.<br>3. Drink the entire dose on an empty stomach 3 times a day until the symptoms subside.";
+	}
+	
+	//animation variables
+	var interval = null;
+	var speed = 6;
+	var count = 0;
+	
+	//function for animation
+	function animate() {
+		count += speed;	
+		//stop animation when image is large enough
+		if (count >= 375) {
+			window.clearInterval(interval);
+			interval = null;
+		}
+		var bigImage = document.getElementById("largeImg");
+		bigImage.setAttribute("style", "width: " + (0.760 * count + "px;") + "height: " + (0.9 * count + "px;"));
+	}
+	//function for click events
+	function display(imgfile) {
+		if(interval)
+			return;
+		var bigImage = document.getElementById("largeImg");
+		bigImage.setAttribute("style", "width: 0px; height: 0px;");
+		bigImage.setAttribute("src", "images/" + imgfile);
+		bigImage.setAttribute("alt", "Large version of " + imgfile);
+		count = 0;
+		interval = window.setInterval("animate()", 10);
+		//change style of remedy content dynamically based on which img is clicked
+		if (imgfile == "gingerTea.jpg") {
+			document.getElementById("remInfo").style.color = "darkorange";
+			document.getElementById("remInfo").style.backgroundColor = "yellow";
+		}
+		else if (imgfile == "aloeVeraCream.jpg") {
+			document.getElementById("remInfo").style.color = "white";
+			document.getElementById("remInfo").style.backgroundColor = "green";
+		}
+		else if (imgfile == "balm.jpg") {
+			document.getElementById("remInfo").style.color = "blue";
+			document.getElementById("remInfo").style.backgroundColor = "lawngreen";
+		}
+		else if (imgfile == "tea.jpg") {
+			document.getElementById("remInfo").style.color = "goldenrod";
+			document.getElementById("remInfo").style.backgroundColor = "ivory";
+		}
+		else if (imgfile == "syrup.jpg") {
+			document.getElementById("remInfo").style.color = "ivory";
+			document.getElementById("remInfo").style.backgroundColor = "indianred";
+		}
+		else if (imgfile == "tumeric.jpg") {
+			document.getElementById("remInfo").style.color = "black";
+			document.getElementById("remInfo").style.backgroundColor = "darkorange";
+		}
+	}
+	
+	window.addEventListener( "load", registerListeners, false );
+</script>
+</head>
+
+<body>
+	<div class="banner">
+		<a id="top"></a>
+		<a class="anchor" href="#bottom">Skip to Bottom</a>
+	</div>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-4">
+				<img class="icon img-fluid" src="images/pestleIcon.png" width="200"  alt="pestle icon"/>
+			</div>
+			<div class="col-sm-4">
+				<h1>The Secret Garden</h1>
+			  <h3>~Medicinal Herbs~</h3>
+			</div>	
+			<div class="col-sm-4">
+    	    <img class="icon img-fluid" src="images/pIcon.png" width="170" alt="plant icon"/>
+			</div>
+		</div>
+	</div>
+	<nav>
+		<ul id="navUL">
+			<li><a href="SGhome.html">Homepage</a></li>
+			<li><a href="SGherbs.html">Healing Herbs</a></li>
+			<li><a href="SGdiy.html">DIY Tips</a></li>
+			<li><a href="SGtools.html">Essential Tools</a></li>
+			<li><a href="SGremedies.html">Herbal Remedies</a></li>
+			<li><a href="SGhistory.html">History</a></li>
+			<li><a href="SGquiz.html">Herbs Quiz</a></li>
+		</ul>
+	</nav>
+	<br>
+	<h3>Herbal Remedies</h3>
+	<br>
+	<p class="remedy">Take our quiz to find the right herb for your remedy! Please note, quiz is only for minor or non-emergency medical conditions! If facing a life-threatening emergency please contact your Physician or call 911!</p><br>
+	
+	<div class="container">
+		<div class="row">
+			<div class="column">
+    	    	<img id="frame" src="images/grindingHerbs.jpg" alt="grinding herbs"/> 
+			</div>
+			<div class="column form">
+				<form id="form" method="get" action="SGremedies.html">
+				<fieldset>
+				<legend><b>Find Your Herb Quiz</b></legend>
+				Name:    <input type="text" name="name" required> <br>
+				E-mail: <input type="email" name="email" required><br>
+				Age: <select name="age">
+						<option value="0-12">0-12</option>
+						<option value="13-21">13-21</option>
+						<option value="22-35">22-35</option>
+						<option value="36-48">36-48</option>
+						<option value="49-69">49-69</option>
+						<option value="70-85">70-85</option>
+						<option value="86+">86+</option>
+				</select>
+				<br>
+				Gender: <input type="radio" name="sex" value="m" required="required"> Male
+				<input type="radio" name="sex" value="f"> Female
+				<input type="radio" name="sex" value="o"> Other
+				<br>
+				Currently pregnant or breastfeeding? <input type="checkbox" name="pregnant">
+				<br>
+				Physical ailment: <select name="physical">
+					<option value="none">None</option>
+					<option value="acne">Acne</option>
+					<option value="asthma">Asthma</option>
+					<option value="coldFlu">Cold/Flu</option>
+					<option value="diarrhea">Diarrhea</option>
+					<option value="eczema">Eczema</option>
+					<option value="erectileDys">Erectile Dysfunction</option>
+					<option value="fever">Fever</option>
+					<option value="fungal">Fungal Infection</option>
+					<option value="headache">Headache/Migraine</option>
+					<option value="hemorroids">Hemorroids</option>
+					<option value="hives">Hives/Rash</option>
+					<option value="indigestion">Indigestion</option>
+					<option value="insect">Insect Bite</option>
+					<option value="insomnia">Insomnia</option>
+					<option value="burn">Minor Burn</option>
+					<option value="cut">Minor cut/scrape</option>
+					<option value="nausea">Nausea</option>
+					<option value="sunburn">Sunburn</option>
+				</select>
+				<br>
+				Mental Ailment: <select name="mental">
+					<option value="none2">None</option>
+					<option value="anxiety">Anxiety</option>
+					<option value="depression">Depression</option>
+					<option value="fatigue">Fatigue</option>
+					<option value="appetite">Lack of Appetite</option>
+					<option value="memory">Memory Loss</option>
+					<option value="stress">Stress</option>
+					<option value="sleeping">Trouble Sleeping</option>
+				</select>
+				<br>
+				Rate your satisfaction with your current prescriptions/therapies: <br>
+				Needs Improvement <input type="range" name="rating" min="0" max="10"> Satisfied
+				<br>
+				<input type="reset" value="Reset">
+				<input type="submit" value="Submit">
+			</fieldset>
+			</form>
+	  		</div>	
+		</div>
+	</div>
+	
+	<br>
+	<h3>Select an Image for Remedy Recipe</h3>
+	<br>
+	<div class="container collage">
+		<div class="row">
+			<div class="column half">
+				<img id="ginger" src="images/gingerTea.jpg" alt="ginger tea"/> 
+		     	<img id="burn" src="images/aloeVeraCream.jpg" alt="aloe vera burn balm"/> 
+			</div>
+			<div class="column half">
+				<img id="balm" src="images/balm.jpg" alt="balm"/>
+				<img id="tea" src="images/tea.jpg" alt="tea"/> 
+				 
+			</div>
+		  	<div class="column half"> 
+				<img id="syrup" src="images/syrup.jpg" alt="syrup"/> 
+				<img id="tumeric" src="images/tumeric.jpg" alt="tumeric"/>
+		 	</div>
+		</div>
+	</div>
+	<div>
+	<img id="largeImg" src="dummy" alt=""/>
+	<div id="remInfo">
+		<h3 id="title"></h3>
+		<ul id="ingredients">
+			
+		</ul>
+		<p id="instructions"></p>
+	</div>
+	</div>
+	<div class="wrapper">
+	<div class="footer">
+		<p>Disclaimer: This website is developed as an educational project. Certain materials are included under the fair use exemption of the U.S. Copyright Law and have been prepared according to the multimedia fair use guidelines and are restricted from further use. All images are free to use with no attribution required under the CC0 <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en">Creative Commons License</a>. <br>
+			Sources for images: <a href="https://pixy.org/">pixy.org</a>, <a href="https://www.flickr.com/creativecommons/">flickr.com</a>, <a href="https://pixabay.com/">pixabay.com</a>, and <a href="https://pxhere.com/">pxhere.com</a></p>
+		<a id="style" href="SGcss.css">CSS Style Sheet</a>
+		<a id="bottom"></a><a class="anchor" href="#top">Skip to Top</a>
+	</div>
+	</div>
+	<script>
+    	$("form").validate();
+	</script>
+</body>
+</html>

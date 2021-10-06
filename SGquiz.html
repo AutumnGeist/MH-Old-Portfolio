@@ -1,0 +1,254 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>SGquiz</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="SGcss.css">
+	
+<script type= "text/javascript">
+	//array of images
+	var randomImg;
+	var herbPics = ["aloe_vera", "arnica", "basil", "calendula", "chamomile", "dandelion", "echinacea", "eucalyptus", "feverfew", "ginkgo", "lavender", "milk_thistle", "peppermint", "rosemary", "sage", "st_john's_wort", "tea_tree", "thyme", "valerian", "witch-hazel"];
+	//declare variable to set previous img index
+	var previousImg;
+	
+	//pick random img, clear answer box
+	function pickImg() {
+		//pick random index number to display from img array
+		var index = Math.floor(Math.random() * 20);
+		window.indexNum = index;
+		//check if index is the same as previousImg, pick new img index if it is
+		if (previousImg != index) {
+			var randomImg = document.getElementById("randomImg");
+			randomImg.setAttribute("src", "images/" + herbPics[index] + ".jpg");
+			randomImg.setAttribute("alt", herbPics[index]);
+			window.indexNum = index;
+			previousImg = index;
+		}else {
+			pickImg();
+		}
+		document.getElementById("output").innerHTML = "";
+	}
+	
+	//check if form answer is correct, output answer in text area
+	function answer() {
+		//declare variable to hold answer feedback
+		var content;
+		var option = document.getElementById("answer");
+		var answer = option.value;
+		//check if answer is correct or not, set feedback
+		if (answer.toLowerCase() === herbPics[indexNum])
+			content = "Correct! Good Job!";
+		else	
+			content = "Incorrect! Try Again!"
+		//output feedback
+		document.getElementById("output").innerHTML = content;
+		window.scroll(0, 200);
+	}
+	//open new browser window once Learn More button is clicked for each herb
+	function openWindow() {
+		//switch used to open window for each type of herb, calculated by array index number
+		switch(indexNum) {
+			case 0:
+				window.open("https://en.wikipedia.org/wiki/Aloe_vera");
+				break;
+			case 1:
+				window.open("https://en.wikipedia.org/wiki/Arnica");
+				break;
+			case 2:
+				window.open("https://en.wikipedia.org/wiki/Basil");
+				break;
+			case 3:
+				window.open("https://en.wikipedia.org/wiki/Calendula");
+				break;
+			case 4:
+				window.open("https://en.wikipedia.org/wiki/Chamomile");
+				break;
+			case 5:
+				window.open("https://en.wikipedia.org/wiki/Taraxacum");
+				break;
+			case 6:
+				window.open("https://en.wikipedia.org/wiki/Echinacea");
+				break;
+			case 7:
+				window.open("https://en.wikipedia.org/wiki/Eucalyptus");
+				break;
+			case 8:
+				window.open("https://en.wikipedia.org/wiki/Tanacetum_parthenium");
+				break;
+			case 9:
+				window.open("https://en.wikipedia.org/wiki/Ginkgo");
+				break;
+			case 10:
+				window.open("https://en.wikipedia.org/wiki/Lavandula");
+				break;
+			case 11:
+				window.open("https://en.wikipedia.org/wiki/Silybum_marianum");
+				break;
+			case 12:
+				window.open("https://en.wikipedia.org/wiki/Peppermint");
+				break;
+			case 13:
+				window.open("https://en.wikipedia.org/wiki/Rosemary");
+				break;
+			case 14:
+				window.open("https://en.wikipedia.org/wiki/Sage");
+				break;
+			case 15:
+				window.open("https://en.wikipedia.org/wiki/Hypericum_perforatum");
+				break;
+			case 16:
+				window.open("https://en.wikipedia.org/wiki/Tea_tree");
+				break;
+			case 17:
+				window.open("https://en.wikipedia.org/wiki/Thyme");
+				break;
+			case 18:
+				window.open("https://en.wikipedia.org/wiki/Valerian_(herb)");
+				break;
+			case 19:
+				window.open("https://en.wikipedia.org/wiki/Witch-hazel");
+				break;
+		}
+	}
+	
+	//load user name if saved in localStorage
+	function loadName() {	
+		if("user" in localStorage) {
+			document.getElementById("userName").value = "";
+			document.getElementById("message").innerHTML = "Welcome " + localStorage.getItem("user") + "!";
+		}
+	}
+	//get user name and save to localStorage, print personalized message
+	function rememberMe() {
+		var userName = document.getElementById("userName").value;
+		localStorage.setItem("user", userName);
+		//output personalized message
+		document.getElementById("message").innerHTML = "Welcome " + localStorage.getItem("user") + "!";
+	}
+	//reset local storage name value, clear name input and message
+	function reset() {
+		localStorage.clear();
+		document.getElementById("userName").value = "";
+		document.getElementById("message").innerHTML = "";
+	}
+	
+	//loads random img to page, loads userName if set, registers all click event handlers
+	function start() {
+		//show last modified date
+		var modDate = document.lastModified;
+		document.getElementById("date").innerHTML = modDate;
+		//display random img
+		pickImg();
+		//load the userName if saved
+		loadName();
+		//save userName to local storage by clicking Remember Me
+		var rememberBtn = document.getElementById("remember");
+		rememberBtn.addEventListener("click", rememberMe, false);
+		//reset userName in local storage by clicking Reset
+		var resetBtn = document.getElementById("reset");
+		resetBtn.addEventListener("click", reset, false);
+		//display another random image by clicking next
+		var nextButton = document.getElementById("next");
+		nextButton.addEventListener("click", pickImg, false);
+		//check user answer by clicking submit
+		var submitButton = document.getElementById("submit");
+		submitButton.addEventListener("click", answer, false);
+		//open new browser window by clicking Learn More
+		var learnBtn = document.getElementById("open");
+		learnBtn.addEventListener("click", openWindow, false);
+	}
+		
+	//event listener starts scripts after page loads
+	window.addEventListener("load", start, false);
+	
+</script>
+</head>
+
+<body>
+	<div class="banner">
+		<a id="top"></a>
+		<label>Last Modified: </label><span id="date"></span>
+		<a class="anchor" href="#bottom">Skip to Bottom</a>
+	</div>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-4">
+				<img class="icon img-fluid" src="images/pestleIcon.png" width="200"  alt="pestle icon"/>
+			</div>
+			<div class="col-sm-4">
+				<h1>The Secret Garden</h1>
+			  <h3>~Medicinal Herbs~</h3>
+			</div>	
+			<div class="col-sm-4">
+    	    <img class="icon img-fluid" src="images/pIcon.png" width="170" alt="plant icon"/>
+			</div>
+		</div>
+	</div>
+	<nav>
+		<ul id="navUL">
+			<li><a href="SGhome.html">Homepage</a></li>
+			<li><a href="SGherbs.html">Healing Herbs</a></li>
+			<li><a href="SGdiy.html">DIY Tips</a></li>
+			<li><a href="SGtools.html">Essential Tools</a></li>
+			<li><a href="SGremedies.html">Herbal Remedies</a></li>
+			<li><a href="SGhistory.html">History</a></li>
+			<li><a href="SGquiz.html">Herbs Quiz</a></li>
+		</ul>
+	</nav>
+	<br>
+	<h3>Test Your Herbal Knowledge</h3>
+	<br>
+	<div id="random">
+		<form id="herbQuiz" action="#">
+			<label>What is your name?</label>
+			<input id="userName" type="text">
+			<input id="remember" type="submit" value="Remember Me">
+			<input id="reset" type="submit" value="Reset">
+			<br><br>
+			<p id="message"></p>
+			<br>
+			<img id="randomImg" src="basil.jpg" alt="basil">		
+			<br>
+			<label>Name this herb:</label>
+			<select id="answer">
+				<option value="aloe_vera">Aloe Vera</option>
+				<option value="arnica">Arnica</option>
+				<option value="basil">Basil</option>
+				<option value="calendula">Calendula</option>
+				<option value="chamomile">Chamomile</option>
+				<option value="dandelion">Dandelion</option>
+				<option value="echinacea">Echinacea</option>
+				<option value="eucalyptus">Eucalyptus</option>
+				<option value="feverfew">Feverfew</option>
+				<option value="ginkgo">Ginkgo</option>
+				<option value="lavender">Lavender</option>
+				<option value="milk_thistle">Milk Thistle</option>
+				<option value="peppermint">Peppermint</option>
+				<option value="rosemary">Rosemary</option>
+				<option value="sage">Sage</option>
+				<option value="st_john's_wort">St John's Wort</option>
+				<option value="tea_tree">Tea Tree</option>
+				<option value="thyme">Thyme</option>
+				<option value="valerian">Valerian</option>
+				<option value="witch-hazel">Witch-Hazel</option>
+			</select>
+		<input id="submit" type="submit" value="Submit"><br>
+		<textarea id="output"></textarea><br>
+		<input id="open" type="submit" value="Learn More">
+		<input id="next" type="submit" value="Next">		
+		</form>
+	</div>
+	
+	<div class="wrapper">
+	<div class="footer">
+		<p>Disclaimer: This website is developed as an educational project. Certain materials are included under the fair use exemption of the U.S. Copyright Law and have been prepared according to the multimedia fair use guidelines and are restricted from further use. All images are free to use with no attribution required under the CC0 <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en">Creative Commons License</a>. <br>
+			Sources for images: <a href="https://pixy.org/">pixy.org</a>, <a href="https://www.flickr.com/creativecommons/">flickr.com</a>, <a href="https://pixabay.com/">pixabay.com</a>, and <a href="https://pxhere.com/">pxhere.com</a></p>
+		<a id="style" href="SGcss.css">CSS Style Sheet</a>
+		<a id="bottom"></a><a class="anchor" href="#top">Skip to Top</a>
+	</div>
+	</div>
+</body>
+</html>

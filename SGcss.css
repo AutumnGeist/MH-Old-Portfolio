@@ -1,0 +1,331 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*body (entire page) CSS*/
+body {
+	background-color: mediumspringgreen;
+	font-family: "Times New Roman", Times, serif;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+/*top banner*/
+.banner {
+	background-color: mediumslateblue;
+	height: 70px;
+	width: 100%;
+	padding-top: 0;
+	margin-top: 0;
+	position: top;
+	margin-bottom: 5px;
+	border-bottom: 5px solid indigo;
+}
+/*internal links*/
+.anchor {
+	float: right;
+	text-decoration: none;
+	color: white;
+}
+/*stylize external links*/
+a {
+	text-decoration: none;
+	color: white;
+}
+/*hompage collage images*/
+.collage img {
+	width: 100%
+}
+.half img {
+	height: 50%;
+}
+/*main heading (page title)*/
+h1 {
+	text-align: center;
+	padding-top: 30px;
+	margin: auto;
+	text-shadow: 2px 2px 8px darkgreen;
+}
+/*icon images*/
+.icon {
+	text-align: center;
+	display: block;
+	margin: auto;
+}
+/*page headings*/
+h3 {
+	text-align: center;
+}
+/*navigation bar*/
+nav {
+	background-color: midnightblue;
+	width: 100%;
+	overflow: auto;
+}
+/*nav list style*/
+nav li {
+	list-style: none;
+	float: left;
+	width: 14.28%;
+	text-align: center;
+	padding: 10px;
+}
+/*nav links*/
+nav a {
+	text-decoration: none;	
+	font-size: 20px;
+	color: white;
+}
+nav a:hover {
+	color: blue;
+}
+/*link hover*/
+#anchor:hover, #style:hover {
+	color: blue;
+}
+/*images container uses flexbox*/
+.container {
+	max-width: 100%;
+}
+.row {
+	display: flex;
+}
+.column {
+	flex: 1;
+	margin: 0;
+	padding: 0;
+}
+/*yellow background containers*/
+.yellow {
+	background-color: lightgoldenrodyellow;
+	border: 2px solid indigo;
+	border-radius: 5px;
+}
+/*footer div style*/
+.footer {
+	
+	position: bottom;
+	padding-left: 5%;
+	padding-right: 5%;
+	width: 100%;
+}
+/*footer wrapper*/
+.wrapper {
+	clear: both;
+	background-color: mediumslateblue;
+	border-top: 5px solid indigo;
+	margin-left: -20px;
+	margin-right: -20px;
+}
+/*herb table*/
+.herbTable {
+	table-layout: fixed;
+	width: 100%;	
+}
+.herbTable img {
+	width: 100%;
+}
+/*herb table links*/
+table a {
+	text-decoration: none;
+	color: darkgreen;
+}
+table a:hover {
+	color: blue !important;
+}
+table a:visited {
+	color: darkmagenta;
+}
+th {
+	background-color: yellow;
+}
+table th, td {
+	border: 1px solid black;
+}
+/*table shading*/
+.herbTable tr:nth-child(even) {
+	background-color: lightgoldenrodyellow;
+}
+.herbTable tr:nth-child(odd) {
+	background-color: lightyellow;
+}
+.herbTable li {
+	list-style-type: square;
+	padding: 0;
+	margin: 0;
+}
+/*framed image on remedies page*/
+#frame {
+	border: 2px solid indigo;
+	padding: 3px;
+	background-color: mediumslateblue;
+	border-radius: 10px;
+	width: 100%;
+	height: 100%;
+}
+/*framed images on history page*/
+#rowFrame {
+	border: 2px solid peru;
+}
+#rowFrame img {
+	height: 100%;
+	width: 100%;
+}
+/*form CSS*/
+form {
+	padding: 3% 5%;
+	background-color: lightgoldenrodyellow;
+	border: 2px solid indigo;
+	height: 100%;
+	border-radius: 10px;
+}
+/*history page text*/
+#history, .remedy {
+	padding-left: 8%;
+	padding-right: 5%;
+}
+/*timeline*/
+.timeline {
+	position: relative;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+/*vertical timeline*/
+.timeline::after {
+	content: '';
+	position: absolute;
+	width: 6px;
+	background-color: darkgreen;
+	top: 0;
+	bottom: 0;
+	left: 50%;
+	margin-left: -3px;
+}
+/*timeline content container*/
+.c {
+	padding: 10px 40px;
+	position: relative;
+	width: 50%;
+}
+/*timeline circles*/
+.c::after {
+	content: '';
+	position: absolute;
+	width: 25px;
+    height: 25px;
+  	right: -12px;
+ 	background-color: yellow;
+    border: 5px solid magenta;
+	top: 15px;
+ 	border-radius: 50%;
+ 	z-index: 1;
+}
+/*Move container left of timeline*/
+.left {
+  left: 0;
+}
+
+/*Move container right of timeline*/
+.right {
+  left: 50%;
+}
+
+/*Left container arrow (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/*Right container arrow (pointing left)*/
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix right side container circle*/
+.right::after {
+  left: -12px;
+}
+/*timeline content*/
+.content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+/*Random image on Herb Quiz page*/
+#randomImg {
+	display: block;
+	margin: auto;
+	width: 50%;
+}
+#herbQuiz {
+	text-align: center;	
+}
+#message {
+	color: indigo;
+	font-weight: bold;
+	font-size: 2em;
+}
+/*DIY Tips remPics*/
+#remedies {
+	float: left;
+	clear: left;
+	height: 200px;
+	width: 300px;
+	object-fit: cover;
+}
+#remNames {
+	background-color: lightyellow;
+}
+#remNames td:hover {
+	color: blue;
+	background-color: mediumslateblue;
+}
+#largeImg {
+	float: left;	
+}
+#remInfo {
+	float: right;
+	clear: right;
+	width: 66.63%;
+	height: 336px;
+}
+#remTable {
+	background-color: lightgoldenrodyellow;
+}
+#remImg {
+	width: 300px;
+	height: 200px;
+	clear: left;
+}
+/*Tools page*/
+#toolInfo {
+	color: indigo;
+	text-align: center;
+	padding: 3%;
+}
+.ui-button {
+	padding: 10px;
+}
+.center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+  

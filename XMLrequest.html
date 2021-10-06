@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>XMLrequest</title>
+<script type="text/javascript">
+	//variable to hold XMLHttpRequest object
+	var request = new XMLHttpRequest();
+		
+	function retrieveInfo(url) {
+		if (request) {
+			request.addEventListener("readystatechange", stateChange, false);
+			request.open('GET', url, true);
+			request.send(null);
+		}
+	}//end retrieveInfo
+	
+	function stateChange() {
+		if (request.readyState == 4 && request.status == 200) {
+			document.getElementById("toolInfo").innerHTML = request.responseText;
+		}
+	}//end stateChange
+		
+	 // register event listeners
+   function registerListeners(url)
+   {
+      document.getElementById("blender").addEventListener("click", function(){retrieveInfo("blender.txt");}, false);  
+      document.getElementById("cheesecloth").addEventListener(
+         "click", function(){retrieveInfo("cheesecloth.txt");}, false);  
+	  document.getElementById("cuttingBoard").addEventListener(
+         "click", function(){retrieveInfo("cuttingBoard.txt");}, false);
+	  document.getElementById("sieve").addEventListener(
+         "click", function(){retrieveInfo("sieve.txt");}, false);
+	  document.getElementById("funnels").addEventListener(
+         "click", function(){retrieveInfo("funnels.txt");}, false);
+	  document.getElementById("bowls").addEventListener(
+         "click", function(){retrieveInfo("bowls.txt");}, false);
+	   document.getElementById("tools").addEventListener(
+         "click", function(){retrieveInfo("tools.txt");}, false);
+	   document.getElementById("pestle").addEventListener(
+         "click", function(){retrieveInfo("pestle.txt");}, false);
+	   document.getElementById("scale").addEventListener(
+         "click", function(){retrieveInfo("scale.txt");}, false);
+	   document.getElementById("infuser").addEventListener(
+         "click", function(){retrieveInfo("infuser.txt");}, false);
+   } // end function registerListeners   
+	
+	window.addEventListener( "load", registerListeners, false );
+</script>
+</head>
+
+<body>
+	<button type="button" id="blender" value="blender">Blender</button>
+	<button type="button" id="cheesecloth" value="cheesecloth">Cheesecloth</button>
+	<button type="button" id="cuttingBoard" value="cuttingBoard">Cutting Board</button>
+	<button type="button" id="sieve" value="sieve">Fine Mesh Sieve</button>
+	<button type="button" id="funnels" value="funnels">Funnels</button>
+	<button type="button" id="bowls" value="bowls">Mixing Bowls</button>
+	<button type="button" id="tools" value="tools">Mixing & Scraping Tools</button>
+	<button type="button" id="pestle" value="pestle">Mortar & Pestle</button>
+	<button type="button" id="scale" value="scale">Scale</button>
+	<button type="button" id="infuser" value="infuser">Tea Infuser</button>
+	<h4 id="toolInfo"></h4>
+</body>
+</html>
