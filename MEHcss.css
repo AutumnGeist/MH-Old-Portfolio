@@ -1,0 +1,125 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	background: url("black-thread.png") black;
+	/* Version2 background: url("green-dust-and-scratches.png") black;*/
+	margin: 0;
+	padding: 0;
+}
+#profilePic {
+	border-radius: 50%;
+	width: 50%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+#grid-item1 {
+	grid-column: 1;
+	grid-row: 1;
+}
+.projectPics {
+	width: 30%;
+	height: 20%;
+}
+header {	
+	background-color: blueviolet;
+	/* Version2 background-color: darkorange;*/
+	padding-top: 0;
+	overflow: hidden;
+	
+	border: 5px solid indigo;
+	
+}
+.name {
+	color: ghostwhite;
+	text-align: left;
+	text-shadow: 2px 2px 8px black;
+	padding-left: 5%;
+	float: left;	
+}
+/*navigation bar*/
+nav {
+	float: right;	
+}
+/*nav list style*/
+nav li {
+	list-style: none;
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+/*nav links*/
+nav a {
+	text-decoration: none;	
+	font-size: 20px;
+	color: ghostwhite;
+	display: block;
+	text-align: center;
+	padding: 14px 16px;
+}
+nav a:hover {
+	color: blue;
+}
+a {
+	color: green;
+}
+/*link hover*/
+a:hover, #anchor:hover, #style:hover {
+	color: blue;
+}
+h1 {
+	color: gainsboro;
+	text-align: center;	
+}
+h2 {
+	color: ghostwhite;
+}
+h3 {
+	color: ghostwhite;
+}
+h4 {
+	color: purple;
+}
+p {
+	color: gainsboro;
+	
+}
+#intro {
+	text-align: center;
+}
+#about {
+	grid-column: 2;
+	grid-row: 1;
+	margin-right: 10%;
+}
+.paragraph {
+	padding-left: 30%;
+	padding-right: 25%;
+	padding-top: 8%;
+	clear: both;
+}
+.skillsList, #courses {
+	color: gainsboro;
+	list-style: square;
+	float: left;	
+}
+#exp {
+	grid-column: 2;
+	
+}
+.grid-container {
+	display: grid;
+	grid-template-columns: 450px 700px;
+	justify-content: center;
+}
+#grid-item1 {
+	grid-column: 1;
+}
+#grid-item2 {
+	grid-column: 1;
+	grid-row: 2;
+}
+.center {
+	text-align: center;
+}
