@@ -62,7 +62,8 @@ nav a:hover {
 	color: blue;
 }
 a {
-	color: green;
+	color: ghostwhite;
+	text-decoration: none;
 }
 /*link hover*/
 a:hover, #anchor:hover, #style:hover {
@@ -99,6 +100,19 @@ p {
 	padding-top: 8%;
 	clear: both;
 }
+
+/*projects page*/
+.column {
+	float: left;
+	width: 33.33%;
+	margin: 1%;
+}
+.projectPics {
+	width: 90%;
+	height: 300px;	
+}
+
+/*resume page*/
 .skillsList, #courses {
 	color: gainsboro;
 	list-style: square;
