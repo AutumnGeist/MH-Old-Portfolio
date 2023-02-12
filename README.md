@@ -1,12 +1,7 @@
-# AutumnGeist.github.io
+# MH-Old-Portfolio
 
-Personal Portfolio Website for Marilyn Holland
+Personal Portfolio Website for Marilyn Holland. Created using HTML and CSS.
 
 Contains a professional overview, links to website projects, resume skills list, and contact link. 
-Created using HTML and CSS.
 
-Website Projects
-
-The Secret Garden- created an interactive informational website about medicinal herbs using JavaScript, XML, JSON, AJAX, and JQuery.
-
-Sprinkles Bakery- Designed a bakery business website using CSS and JavaScript.
+This repo is now obsolete. Check out my new portfolio: [AutumnGeist.github.io](https://autumngeist.github.io/)
